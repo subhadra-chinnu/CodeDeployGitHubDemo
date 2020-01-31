@@ -3,7 +3,7 @@ import subprocess as cmd
 import os
 s3 = boto3.resource('s3')
 
-cp = cmd.run("git clone https://github.com/subhadra-chinnu/CodeDeployGitHubDemo.git ", check=True, shell=True)
+#cp = cmd.run("git clone https://github.com/subhadra-chinnu/CodeDeployGitHubDemo.git ", check=True, shell=True)
 
 for obj in s3.Bucket('med-av-daas-preprod-ca').objects.filter(Prefix = "aws-glue-scripts-ca/functions/"):
     if obj.key.endswith('.py'):
