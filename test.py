@@ -14,3 +14,4 @@ cp = cmd.run(f"git commit -a -m '{message}'", check=True, shell=True)
 cp = cmd.run("git push -u origin master -f", check=True, shell=True)
 
 
+
